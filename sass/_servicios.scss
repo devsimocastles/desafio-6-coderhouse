@@ -1,0 +1,89 @@
+.servicios__header {
+    grid-area: header;
+}
+
+.servicios__footer {
+    grid-area: footer;
+}
+
+#servicios__body {
+    background: $fondoServicios;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";
+}
+
+#servicios__main {
+    width: 90%;
+    margin: 2rem auto;
+    padding: 2rem 0;
+    border-radius: 20px;
+    grid-area: main;
+
+    & .titulo__principal {
+        text-transform: capitalize;
+        text-align: center;
+        padding: 2rem 0;
+        color: $colorCards;
+    }
+
+    & .parrafo__principal {
+        text-align: center;
+        font-style: oblique;
+        font-size: 20px;
+        padding-bottom: 2rem;
+        color: $colorCards;
+    }
+
+    & .main__card__container {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 2rem;
+        justify-content: center;
+        align-content: center;
+
+        & .card {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: space-around;
+            background-color: $colorCards;
+            box-shadow: $sombraCards;
+            border-radius: 15px;
+            width: 20em;
+            margin: 2rem;
+            padding: 2rem;
+
+
+            & .card__subtitle {
+                margin: 1rem 0;
+                text-align: center;
+            }
+
+            & .card__parrafo {
+                text-align: center;
+            }
+
+            & .card__btn {
+                a {
+                    display: block;
+                    color: $colorFuente;
+                    background-color: $colorBotonCards;
+                    border-radius: 15px;
+                    text-decoration: none;
+                    padding: 0.75rem 2rem;
+                    margin-top: 2rem;
+
+                    &:hover {
+                        text-decoration: underline;
+                        background-color: $colorBotonCardsHover;
+                    }
+                }
+            }
+        }
+    }
+}
