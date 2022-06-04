@@ -1,0 +1,44 @@
+/*========================== 
+  ANIMACIONES Y TRANSICIONES
+  ==========================
+ */
+
+/* hover botón "conocer más" (index) */
+#index__main {
+  & .main__boton {
+    transition: transform .25s ease-out;
+
+    &:hover {
+      transform: scale(1.08);
+    }
+  }
+}
+
+/* hover links header (para todas las páginas)*/
+#header {
+  & .header__nav__ul__li {
+    transition: all .15s ease-in;
+
+    &:hover {
+      transform: translate(0, -25%);
+    }
+  }
+}
+
+
+/* hover boton card (servicios)*/
+#servicios__main {
+  & .main__card__container {
+    & .card {
+      & .card__btn {
+        a {
+          transition: transform .2s ease-out;
+          transition-delay: 150ms;
+
+          &:hover {
+            transform: scale(1.08);
+          }
+        }
+      }
+    }
+  }
